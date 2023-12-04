@@ -26,7 +26,7 @@ public class LoginController {
         boolean loggedIn = loginService.authorize();
 
         if (loggedIn) {
-            model.addAttribute("message", "authentication successful");
+            return "redirect:/main";
         } else {
             model.addAttribute("message", "authentication failed");
         }
